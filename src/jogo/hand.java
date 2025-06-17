@@ -104,7 +104,7 @@ public class hand {
 		}
 		
 		//verifica as condições para vitoria da banca
-		else if((pointsUsuario > pointsBanca && pointsBanca < 22) || (pointsBanca == 21 && pointsUsuario < 21 || pointsUsuario > 21) || (pointsBanca < pointsUsuario && pointsUsuario > 21)) {
+		else if((pointsBanca > pointsUsuario && pointsBanca < 22) || (pointsBanca == 21 && pointsUsuario < 21 || pointsUsuario > 21) || (pointsBanca < pointsUsuario && pointsUsuario > 21)) {
 			System.out.println("A banca venceu, você perdeu");
 		}
 		
@@ -115,6 +115,7 @@ public class hand {
 		
 		//se os pontos são iguais mas a quantidade de cartas não mostra o vencedor por meio de quem atingiu os pontos com menos cartas
 		else {
+			System.out.println("Desempate por cartas:");
 			System.out.println(cardHandBanca.size() > cardHandUsuario.size() ? "Parabéns você venceu por " 
 					+ (cardHandBanca.size() - cardHandUsuario.size()) + " cartas!!!!!!" : "A banca venceu, você perdeu por " 
 					+ (cardHandUsuario.size() - cardHandBanca.size() + " cartas"));
